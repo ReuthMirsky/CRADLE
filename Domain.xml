@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<PL> 
+	<Letters>
+		<NonTerminals>
+			<Letter goal="yes" name="Complex Mix" id="C">
+				<Params>
+					<Param name="sid"/>
+					<Param name="did"/>
+					<Param name="vol"/>
+					<Param name="scd"/>
+					<Param name="rcd"/>
+					<Param name="dcd"/>
+					<Param name="svol"/>
+					<Param name="dvol"/>
+					<Param name="rvol"/>
+				</Params>
+			</Letter>
+			<Letter goal="no" name="Solution Mix" id="SM">
+				<Params>
+					<Param name="sid"/>
+					<Param name="did"/>
+					<Param name="vol"/>
+					<Param name="scd"/>
+					<Param name="rcd"/>
+					<Param name="dcd"/>
+					<Param name="svol"/>
+					<Param name="dvol"/>
+					<Param name="rvol"/>
+				</Params>
+			</Letter>
+		</NonTerminals>
+		<Terminals>
+			<Letter goal="no" name="simple mix" id="sm">
+				<Params>
+					<Param name="sid"/>
+					<Param name="did"/>
+					<Param name="vol"/>
+					<Param name="scd"/>
+					<Param name="rcd"/>
+					<Param name="dcd"/>
+					<Param name="svol"/>
+					<Param name="dvol"/>
+					<Param name="rvol"/>
+				</Params>
+			</Letter>
+		</Terminals>
+	</Letters>
+	
+	<Recipes>
+		<Recipe prob="0.2" lhs="C" desc="Intermediate Flask to Goal">
+			<Order>
+				<OrderCons firstIndex="1" secondIndex="2"/>
+			</Order>
+			<Equals>
+				<EqualCons firstIndex="1" firstParam="did" secondIndex="2" secondParam="sid"/>
+				<EqualCons firstIndex="0" firstParam="sid" secondIndex="1" secondParam="sid"/>
+				<EqualCons firstIndex="0" firstParam="did" secondIndex="2" secondParam="did"/>
+				<EqualCons firstIndex="0" firstParam="dcd" secondIndex="2" secondParam="dcd"/>
+				<EqualCons firstIndex="0" firstParam="rcd" secondIndex="2" secondParam="rcd"/>
+				<EqualCons firstIndex="0" firstParam="svol" secondIndex="1" secondParam="svol"/>
+				<EqualCons firstIndex="0" firstParam="dvol" secondIndex="2" secondParam="dvol"/>
+				<EqualCons firstIndex="0" firstParam="rvol" secondIndex="2" secondParam="rvol"/>
+			</Equals>
+			<Letter id="SM" index="1"/>
+			<Letter id="SM" index="2"/>
+		</Recipe>
+		
+		<Recipe prob="0.2" lhs="SM" desc="Intermediate Flask to Inner Node">
+			<Order>
+				<OrderCons firstIndex="1" secondIndex="2"/>
+			</Order>
+			<Equals>
+				<EqualCons firstIndex="1" firstParam="did" secondIndex="2" secondParam="sid"/>
+				<EqualCons firstIndex="0" firstParam="sid" secondIndex="1" secondParam="sid"/>
+				<EqualCons firstIndex="0" firstParam="did" secondIndex="2" secondParam="did"/>
+				<EqualCons firstIndex="0" firstParam="dcd" secondIndex="2" secondParam="dcd"/>
+				<EqualCons firstIndex="0" firstParam="rcd" secondIndex="2" secondParam="rcd"/>
+				<EqualCons firstIndex="0" firstParam="svol" secondIndex="1" secondParam="svol"/>
+				<EqualCons firstIndex="0" firstParam="dvol" secondIndex="2" secondParam="dvol"/>
+				<EqualCons firstIndex="0" firstParam="rvol" secondIndex="2" secondParam="rvol"/>
+			</Equals>
+			<Letter id="SM" index="1"/>
+			<Letter id="SM" index="2"/>
+		</Recipe>
+		
+		<Recipe prob="0.2" lhs="C" desc="Same Destination Flask to Goal">
+			<Order>
+				<OrderCons firstIndex="1" secondIndex="2"/>
+			</Order>
+			<Equals>
+				<EqualCons firstIndex="1" firstParam="did" secondIndex="2" secondParam="did"/>
+				<EqualCons firstIndex="0" firstParam="did" secondIndex="1" secondParam="did"/>
+				<?EqualCons firstIndex="0" firstParam="rvol" secondIndex="2" secondParam="rvol"/?>
+			</Equals>
+			<Letter id="SM" index="1"/>
+			<Letter id="SM" index="2"/>
+		</Recipe>
+		
+		<Recipe prob="0.2" lhs="SM" desc="Same Destination Flask to Inner Node">
+			<Order>
+				<OrderCons firstIndex="1" secondIndex="2"/>
+			</Order>
+			<Equals>
+				<EqualCons firstIndex="1" firstParam="did" secondIndex="2" secondParam="did"/>
+				<EqualCons firstIndex="0" firstParam="did" secondIndex="1" secondParam="did"/>
+				<?EqualCons firstIndex="0" firstParam="rvol" secondIndex="2" secondParam="rvol"/?>
+			</Equals>
+			<Letter id="SM" index="1"/>
+			<Letter id="SM" index="2"/>
+		</Recipe>
+		
+		<Recipe prob="0.2" lhs="SM" desc="Leaf to Inner Node">
+			<Equals>
+				<EqualCons firstIndex="0" firstParam="sid" secondIndex="1" secondParam="sid"/>
+				<EqualCons firstIndex="0" firstParam="did" secondIndex="1" secondParam="did"/>
+				<EqualCons firstIndex="0" firstParam="vol" secondIndex="1" secondParam="vol"/>
+				<EqualCons firstIndex="0" firstParam="scd" secondIndex="1" secondParam="scd"/>
+				<EqualCons firstIndex="0" firstParam="dcd" secondIndex="1" secondParam="dcd"/>
+				<EqualCons firstIndex="0" firstParam="rcd" secondIndex="1" secondParam="rcd"/>
+				<EqualCons firstIndex="0" firstParam="rvol" secondIndex="1" secondParam="rvol"/>
+				<EqualCons firstIndex="0" firstParam="dvol" secondIndex="1" secondParam="dvol"/>
+				<EqualCons firstIndex="0" firstParam="svol" secondIndex="1" secondParam="svol"/>
+			</Equals>
+			<Letter id="sm" index="1"/>
+		</Recipe>
+	</Recipes>
+</PL>

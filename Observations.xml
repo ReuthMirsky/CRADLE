@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Observations>
+	<Observation id="sm">
+		<Param name="sid" val="4" />
+		<Param name="did" val="5" />
+		<Param name="svol" val="0.2548" />
+		<Param name="scd" val="0.0g of H2O, 1.8102022601930535E-7g of H+, 1.8102022601930535E-7g of OH-, 1.80153g of D" />
+		<Param name="dvol" val="1.05" />
+		<Param name="dcd" val="" />
+		<Param name="rvol" val="1.05" />
+		<Param name="rcd" val="0.0g of H2O, 1.8102022601930538E-7g of H+, 1.8102022601930538E-7g of OH-, 1.80153g of D" />
+		<Param name="vol" val="0.1" />
+	</Observation>
+	
+	<Observation id="sm">
+		<Param name="sid" val="3" />
+		<Param name="did" val="5" />
+		<Param name="svol" val="0.2548" />
+		<Param name="scd" val="0.0g of H2O, 1.8102022601930535E-7g of H+, 1.8102022601930535E-7g of OH-, 1.80153g of C" />
+		<Param name="dvol" val="1.05" />
+		<Param name="dcd" val="0.0g of H2O, 1.8102022601930538E-7g of H+, 1.8102022601930538E-7g of OH-, 1.80153g of D" />
+		<Param name="rvol" val="1.05" />
+		<Param name="rcd" val="0.0g of H2O, 3.6204045203861076E-7g of H+, 3.6204045203861076E-7g of OH-, 1.80153g of D, 1.80153g of C" />
+		<Param name="vol" val="0.1" />
+	</Observation>
+	
+	<Observation id="sm">
+		<Param name="sid" val="2" />
+		<Param name="did" val="5" />
+		<Param name="svol" val="0.2548" />
+		<Param name="scd" val="0.0g of H2O, 1.8102022601930535E-7g of H+, 1.8102022601930535E-7g of OH-, 1.80153g of B" />
+		<Param name="dvol" val="1.05" />
+		<Param name="dcd" val="0.0g of H2O, 3.6204045203861076E-7g of H+, 3.6204045203861076E-7g of OH-, 1.80153g of D, 1.80153g of C" />
+		<Param name="rvol" val="1.05" />
+		<Param name="rcd" val="0.0g of H2O, 5.430606780579142E-7g of H+, 5.430606780579142E-7g of OH-, 1.4901906667270845E-24g of D, 3.1526775000000002g of C, 0.4503825g of B, 0.900765g of A" />
+		<Param name="vol" val="0.1" />
+	</Observation>
+
+	<Observation id="sm">
+		<Param name="sid" val="1" />
+		<Param name="did" val="5" />
+		<Param name="svol" val="0.2548" />
+		<Param name="scd" val="0.0g of H2O 1.8102022601930535E-7g of H+, 1.8102022601930535E-7g of OH-, 1.80153g of A" />
+		<Param name="dvol" val="1.05" />
+		<Param name="dcd" val="0.0g of H2O, 5.430606780579142E-7g of H+, 5.430606780579142E-7g of OH-, 1.4901906667270845E-24g of D, 3.1526775000000002g of C, 0.4503825g of B, 0.900765g of A" />
+		<Param name="rvol" val="1.05" />
+		<Param name="rcd" val="0.0g of H2O, 7.240809040772214E-7g of H+, 7.240809040772214E-7g of OH-, 1.8627383546891947E-24g of D, 3.1526775000000002g of C, 0.4503825g of B, 2.7022950000000003g of A" />
+		<Param name="vol" val="0.1" />
+	</Observation>
+</Observations>
+
